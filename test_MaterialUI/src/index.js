@@ -1,33 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
-
-// mixuse bootstrap grid layout here:
-import './bootstrap/css/bootstrap.css' 
+import './index.css'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import LinearProgress from 'material-ui/LinearProgress';
 
 const App = () => (
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-5">
+<div class='root_div'>
       <MuiThemeProvider >
-  	    <LinearProgress mode="indeterminate" />
+        <LinearProgress mode="indeterminate" />
       </MuiThemeProvider>
-    </div>
-    <div class="col-md-5">
-        <button>haha</button>
-    </div>
-  </div>
-
-  <div class="row">
-  </div>
-
-  <div class="row">
-    <button>haha</button>
-  </div>
 </div>
 
 )

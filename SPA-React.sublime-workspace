@@ -299,7 +299,7 @@
 			"file": "test_MaterialUI/src/index.js",
 			"settings":
 			{
-				"buffer_size": 510,
+				"buffer_size": 1259,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -308,7 +308,7 @@
 			"file": "test_MaterialUI/src/index.css",
 			"settings":
 			{
-				"buffer_size": 169,
+				"buffer_size": 172,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -694,6 +694,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MuiThemeProvider",
+			"Slider",
 			"black",
 			"blue",
 			"bdcolor",
@@ -735,15 +737,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 510,
+						"buffer_size": 1259,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								424,
-								424
+								724,
+								724
 							]
 						],
 						"settings":
@@ -752,7 +754,7 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 396.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -764,15 +766,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 169,
+						"buffer_size": 172,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								169,
-								169
+								39,
+								39
 							]
 						],
 						"settings":

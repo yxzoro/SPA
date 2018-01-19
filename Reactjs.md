@@ -360,12 +360,502 @@ class Popper extends React.Component{
 
 #### 条件渲染
 '''javascript
+//在 React 中，你可以创建不同的组件来封装各种你需要的行为。然后还可以根据应用的状态变化只渲染其中的一部分。
+//React中的条件渲染写法和JavaScript中的一致，直接使用JavaScript操作符if或条件运算符来判断并创建当前状态的元素,然后让React根据它们来更新UI.
+//例如: 我们将创建一个 Greeting 组件，它会根据用户是否登录来显示不同的内容：
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+ReactDOM.render(
+  // Try changing to isLoggedIn={true}:
+  <Greeting isLoggedIn={false} />,
+  document.getElementById('root')
+);
+'''
+
+#### 你可以使用变量来直接储存元素(写法更灵活)
+'''javascript
+class LoginControl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleLogoutClick = this.handleLogoutClick.bind(this);
+    this.state = {isLoggedIn: false};
+  }
+  handleLoginClick() {
+    this.setState({isLoggedIn: true});
+  }
+  handleLogoutClick() {
+    this.setState({isLoggedIn: false});
+  }
+  render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    let button = null;
+    if (isLoggedIn) {
+      button = <LogoutButton onClick={this.handleLogoutClick} />;
+    } else {
+      button = <LoginButton onClick={this.handleLoginClick} />;
+    }
+    return (
+      <div>
+        <Greeting isLoggedIn={isLoggedIn} />
+        {button}
+      </div>
+    );
+  }
+}
+ReactDOM.render(
+  <LoginControl />,
+  document.getElementById('root')
+);
+'''
+
+#### 使用与运算符&&
+'''javascript
+//在JavaScript中,true && expression总是返回expression,而false && expression总是返回false
+function Mailbox(props) {
+  const unreadMessages = props.unreadMessages;
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 &&
+        <h2>
+          You have {unreadMessages.length} unread messages.
+        </h2>
+      }
+    </div>
+  );
+}
+const messages = ['React', 'Re: React', 'Re:Re: React'];
+ReactDOM.render(
+  <Mailbox unreadMessages={messages} />,
+  document.getElementById('root')
+);
+'''
+
+#### 使用三目运算符
+'''javascript
+//使用JavaScript 的三目运算符 condition ? true : false
+render() {
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    <div>
+      The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+    </div>
+  );
+}
+
+render() {
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    <div>
+      {isLoggedIn ? (
+        <LogoutButton onClick={this.handleLogoutClick} />
+      ) : (
+        <LoginButton onClick={this.handleLoginClick} />
+      )}
+    </div>
+  );
+}
+'''
+
+#### 阻止组件渲染/隐藏组件
+'''javascript
+//隐藏组件，即使它被其他组件渲染。只需让该组件的render方法返回null而不是它的渲染结果即可实现。
+function WarningBanner(props) {
+  if (!props.warn) {
+    return null;
+  }
+  return (
+    <div className="warning">
+      Warning!
+    </div>
+  );
+}
+class Page extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {showWarning: true}
+    this.handleToggleClick = this.handleToggleClick.bind(this);
+  }
+  handleToggleClick() {
+    this.setState(prevState => ({
+      showWarning: !prevState.showWarning
+    }));
+  }
+  render() {
+    return (
+      <div>
+        <WarningBanner warn={this.state.showWarning} />
+        <button onClick={this.handleToggleClick}>
+          {this.state.showWarning ? 'Hide' : 'Show'}
+        </button>
+      </div>
+    );
+  }
+}
+ReactDOM.render(
+  <Page />,
+  document.getElementById('root')
+);
+'''
+
+#### 使用列表的map函数 & Keys
+'''javascript
+//先看如下的js代码,我们使用map()函数让数组中的每一项翻倍,我们得到了一个新的数列doubled
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((number) => number * 2);
+console.log(doubled);
+//在React的JSX中,把数组转化为数列元素的写法是类似的!
+
+//下面,我们使用Js的map()方法遍历numbers数组.对数组中的每个元素返回<li>标签,最后我们得到一个数组listItems
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((number) =>
+  <li>{number}</li>
+);
+//再把整个listItems插入到ul元素中，然后渲染进DOM:
+ReactDOM.render(
+  <ul>{listItems}</ul>,
+  document.getElementById('root')
+);
 
 '''
 
+#### 封装基础列表组件
+'''javascript
+//你会经常需要渲染一个列表到组件中.所以我们就可以把前面的常用代码封装成一个组件.
+//我们让这个组件接收numbers数组作为参数,输出一个无序列表
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    <li>{number}</li>
+  );
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  <NumberList numbers={numbers} />,
+  document.getElementById('root')
+);
 
+//keys的重要性:
+//Keys可以在DOM中的某些元素被增加或删除的时候帮助React识别哪些元素发生了变化.因此你应当给数组中的每一个元素赋予一个确定的标识key
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((number) =>
+  <li key={number.toString()}>
+    {number}
+  </li>
+);
 
+//一个元素的key最好是这个元素在列表中拥有的一个独一无二的字符串。通常，我们使用来自数据的id作为元素的key:
+const todoItems = todos.map((todo) =>
+  <li key={todo.id}>
+    {todo.text}
+  </li>
+);
 
+//当元素没有确定的id时，你可以使用他的序列号索引index作为key
+const todoItems = todos.map((todo, index) =>
+  // Only do this if items have no stable IDs
+  <li key={index}>
+    {todo.text}
+  </li>
+);
+
+//----------------------------------------------------------------------------------------------
+//使用key的示例1:
+function ListItem(props) {
+  // 对啦！这里不需要指定key.
+  return <li>{props.value}</li>;
+}
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    // 又对啦！key应该在这里数组的上下文中被指定(也就是说: 应该在使用而不是定义的时候才指定key!)
+    <ListItem key={number.toString()}
+              value={number} />
+  );
+  return (
+    <ul>
+      {listItems}
+    </ul>
+  );
+}
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+  <NumberList numbers={numbers} />,
+  document.getElementById('root')
+);
+
+//使用key的示例2:
+function Blog(props) {
+  const sidebar = (
+    <ul>
+      {props.posts.map((post) =>
+        <li key={post.id}>
+          {post.title}
+        </li>
+      )}
+    </ul>
+  );
+  const content = props.posts.map((post) =>
+    <div key={post.id}>
+      <h3>{post.title}</h3>
+      <p>{post.content}</p>
+    </div>
+  );
+  return (
+    <div>
+      {sidebar}
+      <hr />
+      {content}
+    </div>
+  );
+}
+const posts = [
+  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
+ReactDOM.render(
+  <Blog posts={posts} />,
+  document.getElementById('root')
+);
+'''
+
+## 写React一定要熟悉JSX的js-h5混合写法...!!
+'''javascript
+//在上面的例子中，我们声明了一个单独的listItems变量并将其包含在JSX中
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    <ListItem key={number.toString()}
+              value={number} />
+  );
+  return (
+    <ul>
+      {listItems}
+    </ul>
+  );
+}
+//JSX允许在大括号中嵌入任何表达式，所以我们可以在map()中这样使用：
+function NumberList(props) {
+  const numbers = props.numbers;
+  return (
+    <ul>
+      {numbers.map((number) =>
+        <ListItem key={number.toString()}
+                  value={number} />
+      )}
+    </ul>
+  );
+}
+'''
+
+#### 表单
+'''javascript
+//HTML表单元素与React中的其他DOM元素有所不同,因为表单元素生来就保留一些内部状态。例如，下面这个表单只接受一个唯一的name。
+<form>
+  <label>
+    Name:
+    <input type="text" name="name" />
+  </label>
+  <input type="submit" value="Submit" />
+</form>
+//当用户提交表单时，HTML的默认行为会使这个表单跳转到一个新页面。在React中亦是如此。
+//但大多数情况下，我们都会构造一个处理提交表单并可访问用户输入表单数据的函数!
+//实现这一点的标准方法是使用一种称为“受控组件”的技术。
+'''
+
+#### React的表单/受控组件的概念和value属性的用法
+#### (表单的input和textarea和select类似,都是通过传入一个value属性来实现对组件的控制)
+    在HTML当中，像<input>,<textarea>, 和 <select>这类表单元素会维持自身状态，并根据用户输入进行更新。
+    但在React中，可变的状态通常保存在组件的状态属性中，并且只能用 setState(). 方法进行更新.
+    我们通过使react变成一种单一数据源的状态来结合二者。React负责渲染表单的组件仍然控制用户后续输入时所发生的变化。
+    相应的，其值由React控制的输入表单元素称为“受控组件”。
+'''javascript
+//例如，我们想要使上个例子中在提交表单时输出name,我们可以写成“受控组件”的形式:
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+//由于value属性是在我们的表单元素上设置的，因此显示的值将始终为React数据源上this.state.value的值。
+//由于每次按键都会触发handleChange来更新当前React的state，所展示的值也会随着不同用户的输入而更新。
+//使用”受控组件”,每个状态的改变都有一个与之相关的处理函数! 这样就可以直接修改或验证用户输入!
+//例如，我们如果想限制输入全部是大写字母，我们可以将handleChange 写为如下：
+handleChange(event) {
+  this.setState({value: event.target.value.toUpperCase()});
+}
+'''
+
+#### textarea标签/value属性的使用
+'''javascript
+//在HTML当中，<textarea> 元素通过子节点来定义它的文本内容
+<textarea>
+  Hello there, this is some text in a text area
+</textarea>
+
+//在React中，<textarea>会用value属性来代替。这样表单中的<textarea> 非常类似于使用单行输入的表单：
+class EssayForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 'Please write an essay about your favorite DOM element.'
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+  handleSubmit(event) {
+    alert('An essay was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <textarea value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+//注意this.state.value是在构造函数中初始化，这样文本区域就能获取到其中的文本。
+'''
+
+#### select标签/value属性的使用
+'''javascript
+//在HTML当中，<select>会创建一个下拉列表。例如这个HTML就创建了一个下拉列表的原型。
+<select>
+  <option value="grapefruit">Grapefruit</option>
+  <option value="lime">Lime</option>
+  <option selected value="coconut">Coconut</option>
+  <option value="mango">Mango</option>
+</select>
+
+//请注意，Coconut选项最初由于selected属性是被选中的。
+//在React中，会在根select标签上而不是在当前的selected属性上使用value属性。
+class FlavorForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: 'coconut'};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+  handleSubmit(event) {
+    alert('Your favorite flavor is: ' + this.state.value);
+    event.preventDefault();
+  }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Pick your favorite La Croix flavor:
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value="grapefruit">Grapefruit</option>
+            <option value="lime">Lime</option>
+            <option value="coconut">Coconut</option>
+            <option value="mango">Mango</option>
+          </select>
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+'''
+
+#### 多个输入的解决方法
+'''javascript
+//当你有处理多个受控的input元素时，你可以通过给每个元素添加一个name属性，来让处理函数根据 event.target.name的值来选择做什么。
+class Reservation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isGoing: true,
+      numberOfGuests: 2
+    };
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    ar partialState = {};
+    partialState[name] = value;
+    this.setState(partialState);
+  }
+  render() {
+    return (
+      <form>
+        <label>
+          Is going:
+          <input
+            name="isGoing"
+            type="checkbox"
+            checked={this.state.isGoing}
+            onChange={this.handleInputChange} />
+        </label>
+        <br />
+        <label>
+          Number of guests:
+          <input
+            name="numberOfGuests"
+            type="number"
+            value={this.state.numberOfGuests}
+            onChange={this.handleInputChange} />
+        </label>
+      </form>
+    );
+  }
+}
+'''
+
+#### 繁琐的受控组件的替代方法 ?
+    有时使用受控组件可能很繁琐，因为您要为数据可能发生变化的每一种方式都编写一个事件处理程序，
+    并通过一个组件来管理全部的状态。你或许应该看看非受控组件，这是一种表单的替代技术。
+
+#### 状态提升(提取多个子组件的状态到父组件中)
+    使用react经常会遇到几个组件需要共用状态数据的情况。
+    这种情况下，我们最好将这部分共享的状态提升至他们最近的父组件当中进行管理。
+'''javascript
+
+'''
 
 
 

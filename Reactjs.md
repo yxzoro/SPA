@@ -3,10 +3,15 @@
 
 [参考Reactjs中文教程](https://doc.react-china.org/)
 
+----------------------------------------------------------------------
+    React使用OOP的思想来写前端页面上的各种组件,
+    先从OOP角度思考解构页面成各组件对象,再挨个实现组件对象,最后组合起来.
+----------------------------------------------------------------------
 
     React的推荐开发方式:
     先解构你的web app页面,把一个页面拆分成各个组件对象(样式[css]+功能[js]的单个组件),
-    然后使用JSX写法来实现各个组件本身(把一个组件需要的h5+css+js代码封装到一起,使其具有静态样式+动态功能,该组件的一切属性+行为都封装在该段JSX代码内)
+    然后使用JSX写法来实现各个组件本身:
+    (把一个组件需要的h5+css+js代码封装到一起,使其具有静态样式+动态功能,该组件的一切属性+行为都封装在该段JSX代码内)
     每个组件有自己的一套实现逻辑,都是独立而完整的对象,
     然后,使用这一个个组件拼出完整的页面.
     一般也是一个div就是一块区域,或者一个div一个组件,div内部各种h5组件摆放.
@@ -853,18 +858,45 @@ class Reservation extends React.Component {
 #### 状态提升(提取多个子组件的状态到父组件中)
     使用react经常会遇到几个组件需要共用状态数据的情况。
     这种情况下，我们最好将这部分共享的状态提升至他们最近的父组件当中进行管理。
+    在React中,状态分享是通过将state数据提升至离需要这些数据的组件最近的父组件来完成的.这就是所谓的状态提升
 '''javascript
 
 '''
 
+#### 推荐组合,不推荐继承
+    在Facebook网站上,我们的React使用了数以千计的组件,然而却还未发现任何需要推荐你使用继承的情况
+    React的属性和组合为你提供了以清晰和安全的方式自定义组件的样式和行为所需的所有灵活性
+    请记住,组件可以接受任意元素,包括基本数据类型、React元素或函数
+'''javascript
+function Dialog(props) {
+  return (
+    <FancyBorder color="blue">
+      <h1 className="Dialog-title">
+        {props.title}
+      </h1>
+      <p className="Dialog-message">
+        {props.message}
+      </p>
+    </FancyBorder>
+  );
+}
 
+function WelcomeDialog() {
+  return (
+    <Dialog
+      title="Welcome"
+      message="Thank you for visiting our spacecraft!" />
+  );
+}
+'''
 
+## React理念: 
+    使用OOP的思想开发前端页面,一个页面是由各个灵活的组件对象组合而成的.
+    每个组件对象本身都是"静态的外观+动态的功能"独立且完整的对象.
+    对页面进行"拆分+组合"的架构设计思路.
 
-
-
-
-
-
+#### 
+[一个简单的使用React设计开发的示例](https://doc.react-china.org/docs/thinking-in-react.html)
 
 
 

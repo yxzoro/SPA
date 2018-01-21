@@ -96,15 +96,13 @@ ReactDOM.render(
 );
 ```
 
-#### React只会更新必要的部分,React DOM首先会比较元素内容先后的不同,而在渲染过程中只会更新改变了的部分(使用了diff dom tree算法)
+###### React只会更新必要的部分,React DOM首先会比较元素内容先后的不同,而在渲染过程中只会更新改变了的部分(使用了diff dom tree算法)
 
-----------------------------------------------------------------------------------------------------------
-组件 & Props属性 & States状态
-组件可以将UI切分成一些的独立的、可复用的部件，这样你就只需专注于构建每一个单独的组件对象本身。
-组件从理解上看就类似是函数:它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。
-就是说:写好组件后,使用组件时,传入属性值,返回react元素渲染到页面上去.
-比如: <NavLink to="/stuff"> Stuff </NavLink> 在页面上就返回个导航按钮
-----------------------------------------------------------------------------------------------------------
+## 组件 & Props属性 & States状态
+    组件可以将UI切分成一些的独立的、可复用的部件，这样你就只需专注于构建每一个单独的组件对象本身。
+    组件从理解上看就类似是函数:它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。
+    就是说:写好组件后,使用组件时,传入属性值,返回react元素渲染到页面上去.
+    比如: <NavLink to="/stuff"> Stuff </NavLink> 在页面上就返回个导航按钮
 
 #### 组件的函数/类定义
 ```javascript
@@ -132,7 +130,7 @@ ReactDOM.render(
 ```
 
 #### 组件组合使用(但组件的返回值只能有一个根元素) 
-'''javascript
+```javascript
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -151,15 +149,13 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
-'''
+```
 
-----------------------------------------------------------------------------------------
-无论是使用函数或是类来声明一个组件，它决不能修改它自己的props! -> props是只读的静态属性
-若组件需要使用可修改的属性,则应该使用states! -> states是可读可改的动态状态值
-----------------------------------------------------------------------------------------
+    无论是使用函数或是类来声明一个组件，它决不能修改它自己的props! -> props是只读的静态属性
+    若组件需要使用可修改的属性,则应该使用states! -> states是可读可改的动态状态值
 
 #### 需要更新自身属性值的Clock实例(使用states)
-'''javascript
+```javascript
 //使用不可修改的props的做法:
 function Clock(props) {
   return (
@@ -221,10 +217,10 @@ ReactDOM.render(
   document.getElementById('root')
 );
 //到此,Clock组件实现了自身的静态属性的读取和动态状态的修改等完整的该clock组件自身的功能!!
-'''
+```
 
 #### 正确地使用状态
-'''javascript
+```javascript
 1.不要直接更新状态
 例如，此代码不会重新渲染组件：
 this.state.comment = 'Hello';  // Wrong
@@ -250,10 +246,10 @@ this.setState(function(prevState, props) {
   };
 });
 
-'''
+```
 
 #### 单向数据流,数据向下流动
-'''javascript
+```javascript
 父组件或子组件都不能知道某个组件是有状态还是无状态，这就是为什么状态通常被称为局部或封装切私有
 除了拥有并设置它的组件外，其它组件不可访问。
 //但组件可以选择将其states状态值作为props属性值传递给其子组件(就是可读取states值传给下个组件的props值)：
@@ -263,7 +259,7 @@ class Clock ...
 //h2组件将在其属性中接收到date值,并且不知道它是来自Clock状态还是Clock的属性,亦或手工输入的.
 //这通常被称为自顶向下或单向数据流:
 //任何状态始终由某些特定组件所有,并且从该状态导出的任何数据或UI只能影响树中下方的组件.
-'''
+```
 
 #### React组件的事件处理函数写法(基本和dom写法一样,稍有差别)
     React 元素的事件处理和 DOM元素的很相似。但是有一点点语法上的不同:
@@ -271,7 +267,7 @@ class Clock ...
     如果采用 JSX 的语法你需要传入一个函数作为事件处理函数，而不是一个字符串(DOM元素的写法)
     React里不能使用返回 false 的方式阻止默认行为。你必须明确的使用 preventDefault
     在组件class的构造函数里必须多加个该事件处理函数的binding才行.
-'''javascript
+```javascript
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
@@ -334,10 +330,10 @@ class LoggingButton extends React.Component {
     );
   }
 }
-'''
+```
 
 #### 向事件处理程序传递参数
-'''javascript
+```javascript
 //通常我们会为事件处理程序传递额外的参数。例如，若是 id 是一个内联 id，有2中写法:
 <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
 <button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
@@ -361,10 +357,10 @@ class Popper extends React.Component{
       );
     }
 }
-'''
+```
 
 #### 条件渲染
-'''javascript
+```javascript
 //在 React 中，你可以创建不同的组件来封装各种你需要的行为。然后还可以根据应用的状态变化只渲染其中的一部分。
 //React中的条件渲染写法和JavaScript中的一致，直接使用JavaScript操作符if或条件运算符来判断并创建当前状态的元素,然后让React根据它们来更新UI.
 //例如: 我们将创建一个 Greeting 组件，它会根据用户是否登录来显示不同的内容：
@@ -380,10 +376,10 @@ ReactDOM.render(
   <Greeting isLoggedIn={false} />,
   document.getElementById('root')
 );
-'''
+```
 
 #### 你可以使用变量来直接储存元素(写法更灵活)
-'''javascript
+```javascript
 class LoginControl extends React.Component {
   constructor(props) {
     super(props);
@@ -417,10 +413,10 @@ ReactDOM.render(
   <LoginControl />,
   document.getElementById('root')
 );
-'''
+```
 
 #### 使用与运算符&&
-'''javascript
+```javascript
 //在JavaScript中,true && expression总是返回expression,而false && expression总是返回false
 function Mailbox(props) {
   const unreadMessages = props.unreadMessages;
@@ -440,10 +436,10 @@ ReactDOM.render(
   <Mailbox unreadMessages={messages} />,
   document.getElementById('root')
 );
-'''
+```
 
 #### 使用三目运算符
-'''javascript
+```javascript
 //使用JavaScript 的三目运算符 condition ? true : false
 render() {
   const isLoggedIn = this.state.isLoggedIn;
@@ -466,10 +462,10 @@ render() {
     </div>
   );
 }
-'''
+```
 
 #### 阻止组件渲染/隐藏组件
-'''javascript
+```javascript
 //隐藏组件，即使它被其他组件渲染。只需让该组件的render方法返回null而不是它的渲染结果即可实现。
 function WarningBanner(props) {
   if (!props.warn) {
@@ -507,10 +503,10 @@ ReactDOM.render(
   <Page />,
   document.getElementById('root')
 );
-'''
+```
 
 #### 使用列表的map函数 & Keys
-'''javascript
+```javascript
 //先看如下的js代码,我们使用map()函数让数组中的每一项翻倍,我们得到了一个新的数列doubled
 const numbers = [1, 2, 3, 4, 5];
 const doubled = numbers.map((number) => number * 2);
@@ -528,10 +524,10 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-'''
+```
 
 #### 封装基础列表组件
-'''javascript
+```javascript
 //你会经常需要渲染一个列表到组件中.所以我们就可以把前面的常用代码封装成一个组件.
 //我们让这个组件接收numbers数组作为参数,输出一个无序列表
 function NumberList(props) {
@@ -631,10 +627,10 @@ ReactDOM.render(
   <Blog posts={posts} />,
   document.getElementById('root')
 );
-'''
+```
 
 ## 写React一定要熟悉JSX的js-h5混合写法...!!
-'''javascript
+```javascript
 //在上面的例子中，我们声明了一个单独的listItems变量并将其包含在JSX中
 function NumberList(props) {
   const numbers = props.numbers;
@@ -660,10 +656,10 @@ function NumberList(props) {
     </ul>
   );
 }
-'''
+```
 
 #### 表单
-'''javascript
+```javascript
 //HTML表单元素与React中的其他DOM元素有所不同,因为表单元素生来就保留一些内部状态。例如，下面这个表单只接受一个唯一的name。
 <form>
   <label>
@@ -675,7 +671,7 @@ function NumberList(props) {
 //当用户提交表单时，HTML的默认行为会使这个表单跳转到一个新页面。在React中亦是如此。
 //但大多数情况下，我们都会构造一个处理提交表单并可访问用户输入表单数据的函数!
 //实现这一点的标准方法是使用一种称为“受控组件”的技术。
-'''
+```
 
 #### React的表单/受控组件的概念和value属性的用法
 #### (表单的input和textarea和select类似,都是通过传入一个value属性来实现对组件的控制)
@@ -683,7 +679,7 @@ function NumberList(props) {
     但在React中，可变的状态通常保存在组件的状态属性中，并且只能用 setState(). 方法进行更新.
     我们通过使react变成一种单一数据源的状态来结合二者。React负责渲染表单的组件仍然控制用户后续输入时所发生的变化。
     相应的，其值由React控制的输入表单元素称为“受控组件”。
-'''javascript
+```javascript
 //例如，我们想要使上个例子中在提交表单时输出name,我们可以写成“受控组件”的形式:
 class NameForm extends React.Component {
   constructor(props) {
@@ -718,10 +714,10 @@ class NameForm extends React.Component {
 handleChange(event) {
   this.setState({value: event.target.value.toUpperCase()});
 }
-'''
+```
 
 #### textarea标签/value属性的使用
-'''javascript
+```javascript
 //在HTML当中，<textarea> 元素通过子节点来定义它的文本内容
 <textarea>
   Hello there, this is some text in a text area
@@ -757,10 +753,10 @@ class EssayForm extends React.Component {
   }
 }
 //注意this.state.value是在构造函数中初始化，这样文本区域就能获取到其中的文本。
-'''
+```
 
 #### select标签/value属性的使用
-'''javascript
+```javascript
 //在HTML当中，<select>会创建一个下拉列表。例如这个HTML就创建了一个下拉列表的原型。
 <select>
   <option value="grapefruit">Grapefruit</option>
@@ -802,10 +798,10 @@ class FlavorForm extends React.Component {
     );
   }
 }
-'''
+```
 
 #### 多个输入的解决方法
-'''javascript
+```javascript
 //当你有处理多个受控的input元素时，你可以通过给每个元素添加一个name属性，来让处理函数根据 event.target.name的值来选择做什么。
 class Reservation extends React.Component {
   constructor(props) {
@@ -849,7 +845,7 @@ class Reservation extends React.Component {
     );
   }
 }
-'''
+```
 
 #### 繁琐的受控组件的替代方法 ?
     有时使用受控组件可能很繁琐，因为您要为数据可能发生变化的每一种方式都编写一个事件处理程序，
@@ -859,15 +855,15 @@ class Reservation extends React.Component {
     使用react经常会遇到几个组件需要共用状态数据的情况。
     这种情况下，我们最好将这部分共享的状态提升至他们最近的父组件当中进行管理。
     在React中,状态分享是通过将state数据提升至离需要这些数据的组件最近的父组件来完成的.这就是所谓的状态提升
-'''javascript
+```javascript
 
-'''
+```
 
 #### 推荐组合,不推荐继承
     在Facebook网站上,我们的React使用了数以千计的组件,然而却还未发现任何需要推荐你使用继承的情况
     React的属性和组合为你提供了以清晰和安全的方式自定义组件的样式和行为所需的所有灵活性
     请记住,组件可以接受任意元素,包括基本数据类型、React元素或函数
-'''javascript
+```javascript
 function Dialog(props) {
   return (
     <FancyBorder color="blue">
@@ -888,14 +884,14 @@ function WelcomeDialog() {
       message="Thank you for visiting our spacecraft!" />
   );
 }
-'''
+```
 
 ## React理念: 
     使用OOP的思想开发前端页面,一个页面是由各个灵活的组件对象组合而成的.
     每个组件对象本身都是"静态的外观+动态的功能"独立且完整的对象.
     对页面进行"拆分+组合"的架构设计思路.
 
-#### 
+#### React使用示例
 [一个简单的使用React设计开发的示例](https://doc.react-china.org/docs/thinking-in-react.html)
 
 

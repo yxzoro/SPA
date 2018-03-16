@@ -248,6 +248,17 @@ this.setState(function(prevState, props) {
 
 ```
 
+
+## React里State(状态)值的改变 - 会触发render方法重新渲染 !!
+*修改React里对象的state值:该值的改变会触发该对象自身的render方法,从而自动重新渲染自己!*
+    React把组件看成是一个状态机(State Machines)
+    通过与用户的交互,实现不同状态,然后渲染UI,让用户界面和数据保持一致
+    React里,只需更新组件的state,然后根据新的state重新渲染用户界面(不要操作 DOM)
+
+    以下实例中创建了LikeButton组件,getInitialState方法用于定义初始状态,也就是一个对象,这个对象可以通过this.state属性读取.
+    当用户点击组件,导致状态变化,this.setState方法就修改状态值,每次修改以后,自动调用this.render方法,再次渲染组件.
+
+
 #### 单向数据流,数据向下流动
 ```javascript
 父组件或子组件都不能知道某个组件是有状态还是无状态，这就是为什么状态通常被称为局部或封装切私有

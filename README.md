@@ -1,5 +1,6 @@
 ## React SPA
-*put all files from SPA/build/ to docs/ to publish your app in redhair.xyz*
+*put all files from SPA/build/ to docs/ to publish your app in redhair.xyz*    
+*copy spa_router_example/spa_materialUI_example to your_spa, then write your code*    
 
 -----------------------------------------------------------------------------------------------
     MaterialUI(css UI framework with UI components written in React)  

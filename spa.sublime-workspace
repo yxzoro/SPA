@@ -1,0 +1,945 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"top",
+				"top"
+			],
+			[
+				"ma",
+				"max_profit_v1\tfunction"
+			],
+			[
+				"_m",
+				"_min\tstatement"
+			],
+			[
+				"l",
+				"l\tparam"
+			],
+			[
+				"max",
+				"max_\tstatement"
+			],
+			[
+				"min",
+				"min_\tstatement"
+			],
+			[
+				"mi",
+				"min_\tstatement"
+			],
+			[
+				"pro",
+				"profit"
+			],
+			[
+				"exc",
+				"exchange_sort\tfunction"
+			],
+			[
+				"in",
+				"insert\tfunction"
+			],
+			[
+				"insert_",
+				"insert_sort_2\tfunction"
+			],
+			[
+				"e",
+				"Exception"
+			],
+			[
+				"tim",
+				"time"
+			],
+			[
+				"kw",
+				"kw\tparam"
+			],
+			[
+				"imp",
+				"import\timport (...) ʂ"
+			],
+			[
+				"f",
+				"f\tfunction"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"im",
+				"import\tkeyword"
+			],
+			[
+				"cla",
+				"class\tNew Class"
+			],
+			[
+				"i",
+				"i\tforstmt"
+			],
+			[
+				"__d",
+				"__dict__\tinstance"
+			],
+			[
+				"ge",
+				"get_hub\tfunction"
+			],
+			[
+				"gr",
+				"greenlet\tmodule"
+			],
+			[
+				"tes",
+				"test_sleep"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"te",
+				"test_async_sleep\tfunction"
+			],
+			[
+				"sy",
+				"sync_to_async\tfunction"
+			],
+			[
+				"s",
+				"start"
+			],
+			[
+				"asy",
+				"async_f\tfunction"
+			],
+			[
+				"set",
+				"set_result\tfunction"
+			],
+			[
+				"a",
+				"args\tparam"
+			],
+			[
+				"ins",
+				"instance\tfunction"
+			],
+			[
+				"IO",
+				"ioloop\tmodule"
+			],
+			[
+				"A",
+				"AsyncHTTPClient\tclass"
+			],
+			[
+				"htt",
+				"httpclient\tmodule"
+			],
+			[
+				"h",
+				"httpclient\tmodule"
+			],
+			[
+				"da",
+				"data1\tstatement"
+			],
+			[
+				"pod",
+				"pod_id"
+			],
+			[
+				"as",
+				"as_dict"
+			],
+			[
+				"st",
+				"storage"
+			],
+			[
+				"stor",
+				"storage_list\tstatement"
+			],
+			[
+				"volume",
+				"volume_id\tparam"
+			],
+			[
+				"RSA",
+				"RSAChassis\tstatement"
+			],
+			[
+				"NV",
+				"NVMEPodManagerAPI\tclass"
+			],
+			[
+				"sto",
+				"storage2\tstatement"
+			],
+			[
+				"mls",
+				"mls_count\tstatement"
+			],
+			[
+				"ba",
+				"batch_count\tstatement"
+			],
+			[
+				"impor",
+				"import"
+			],
+			[
+				"pa",
+				"path\tmodule"
+			],
+			[
+				"pos",
+				"post\tfunction"
+			],
+			[
+				"po",
+				"port"
+			],
+			[
+				"Y",
+				"YXIsMaster\tfunction"
+			],
+			[
+				"y",
+				"yx\tmodule"
+			],
+			[
+				"green",
+				"greenThread\tstatement"
+			],
+			[
+				"soc",
+				"sock"
+			],
+			[
+				"ev",
+				"eventlet\tmodule"
+			],
+			[
+				"fo",
+				"format\tfunction"
+			],
+			[
+				"le",
+				"lengthOfLongestSubstring\tfunction"
+			],
+			[
+				"cl",
+				"clock\tfunction"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"str",
+				"string\tparam"
+			],
+			[
+				"b",
+				"b_"
+			],
+			[
+				"su",
+				"sushu\tfunction"
+			],
+			[
+				"ran",
+				"range\tfunction"
+			],
+			[
+				"el",
+				"else\tkeyword"
+			],
+			[
+				"ra",
+				"randrange\tstatement"
+			],
+			[
+				"r",
+				"randrange\tstatement"
+			],
+			[
+				"index",
+				"index_i"
+			],
+			[
+				"inde",
+				"index_i\tstatement"
+			],
+			[
+				"rer",
+				"return\tkeyword"
+			],
+			[
+				"P",
+				"Process\tclass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Reactjs.md",
+			"settings":
+			{
+				"buffer_size": 22658,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "your_spa/src/index.js",
+			"settings":
+			{
+				"buffer_size": 2931,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/GoSublime/GoSublime.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/GoSublime/GoSublime.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 310.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Add Current File"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"git",
+				"Git: Pull"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"psuh",
+				"Git: Push"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings"
+			],
+			[
+				"pu",
+				"Git: Pull"
+			],
+			[
+				"com",
+				"Git: Commit history"
+			],
+			[
+				"sta",
+				"Git: Status"
+			],
+			[
+				"git branch ",
+				"Git: Change Branch"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"files",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"adda",
+				"Git: Add All"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"vinta",
+				"View: Toggle Minimap"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"pul",
+				"Git: Pull"
+			],
+			[
+				"gitpus",
+				"Git: Push"
+			],
+			[
+				"gitco",
+				"Git: Commit"
+			],
+			[
+				"gitadd",
+				"Git: Add All"
+			],
+			[
+				"gitp",
+				"Git: Pull"
+			],
+			[
+				"gitpull",
+				"Git: Pull"
+			],
+			[
+				"git ",
+				"Git: Log"
+			],
+			[
+				"gitsta",
+				"Git: Status"
+			],
+			[
+				"replpyth",
+				"SublimeREPL: Python"
+			],
+			[
+				"python",
+				"Anaconda: Set Python interpreter"
+			]
+		],
+		"width": 470.0
+	},
+	"console":
+	{
+		"height": 189.0,
+		"history":
+		[
+			"sys.path",
+			"import sys",
+			"data",
+			"import tornado ",
+			"sys.path",
+			"import sys",
+			"date"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/yx/Desktop/spa",
+		"/C/Users/yx/Desktop/spa/your_spa",
+		"/C/Users/yx/Desktop/spa/your_spa/public",
+		"/C/Users/yx/Desktop/spa/your_spa/src"
+	],
+	"file_history":
+	[
+		"/C/Users/yx/Desktop/spa/SPA/src/Main.js",
+		"/C/Users/yx/Desktop/spa/SPA/src/registerServiceWorker.js",
+		"/C/Users/yx/Desktop/spa/test_MaterialUI/src/index.js",
+		"/C/Users/yx/Desktop/spa/test_MaterialUI/src/index.css",
+		"/C/Users/yx/Desktop/spa/test_MaterialUI/public/index.html",
+		"/C/Users/yx/Desktop/spa/README.md",
+		"/C/Users/yx/Desktop/spa/test_MaterialUI/src/test_div_layout.html",
+		"/C/Users/yx/Desktop/test_git/index.html",
+		"/C/Users/yx/Desktop/test_git/index2.html",
+		"/C/Users/yx/Desktop/haha.html",
+		"/C/Users/yx/Desktop/spa/test_MaterialUI/src/bootstrap.css",
+		"/C/Users/yx/Desktop/spa/test_MaterialUI/public/aeon-grid.css",
+		"/C/Users/yx/Desktop/spa/test_MaterialUI/public/index.css",
+		"/C/Users/yx/Desktop/leetcode/LinarTableQuestions/str_search.py",
+		"/C/Users/yx/Desktop/leetcode/LinarTableQuestions/python_interview/python_interview.md",
+		"/C/Users/yx/Desktop/leetcode/LinarTableQuestions/README.md",
+		"/C/Users/yx/Desktop/leetcode/lintcode/test.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode/001 Two Sum.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode/073 Set Matrix Zeroes.py",
+		"/C/Users/yx/Desktop/leetcode/README.md",
+		"/C/Users/yx/Desktop/leetcode/leetcode_answer_blog.url",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/eleme-str_composition_palindromic.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/README.md",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/tree.py",
+		"/C/Users/yx/Desktop/leetcode/groupby_in_python.py",
+		"/C/Users/yx/Desktop/leetcode/python开发考虑性能优化.py",
+		"/C/Users/yx/Desktop/leetcode/常用python函数.py",
+		"/C/Users/yx/Desktop/leetcode/for+recursive.py",
+		"/C/Users/yx/Desktop/leetcode/algorithms.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/merge_same_key_into_list.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/longest_norepeat_substr.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/two_sum.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/bubble_sort.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/find_max_profit.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/haishenTech_inerview.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/sushu.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/fib.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/two_added_is_palindrome_string.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/palindrome_string.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/symmetry_string.py",
+		"/C/Users/yx/Desktop/leetcode/python_interview/python_interview.md",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/timout2.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/str_search.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/insert_sort.py",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/max_containter.py",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/Boxy Theme/Boxy Solarized Dark.sublime-theme",
+		"/C/Users/yx/Desktop/leetcode/python_interview.md",
+		"/C/Users/yx/Desktop/leetcode/leetcode_simple/zigzag.py",
+		"/C/Users/yx/.git-credential",
+		"/C/Users/yx/Desktop/UJR-SPA/README.md",
+		"/C/Users/yx/Desktop/UJR-SPA/SPA/README.md",
+		"/C/Users/yx/Desktop/timout.py",
+		"/D/Python2.7/lib/threading.py",
+		"/C/Users/yx/Desktop/timer.py",
+		"/C/Users/yx/Desktop/go/README.md",
+		"/C/Users/yx/Desktop/a.go",
+		"/C/Users/yx/Desktop/线程安全.md",
+		"/C/Users/yx/Desktop/xxx.py",
+		"/C/Users/yx/Desktop/以后尽量都使用面向对象写代码-有利于python和java和go都统一思路和写法.md",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/GoSublime/GoSublime.sublime-settings",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/User/GoSublime.sublime-settings",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/_compat.py",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/Flask_SQLAlchemy-2.1-py2.7.egg-info/not-zip-safe",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/Flask_SQLAlchemy-2.1-py2.7.egg-info/PKG-INFO",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/Flask_SQLAlchemy-2.1-py2.7.egg-info/requires.txt",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/Flask_SQLAlchemy-2.1-py2.7.egg-info/SOURCES.txt",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/Flask_SQLAlchemy-2.1-py2.7.egg-info/top_level.txt",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/__init__.py",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/Flask_SQLAlchemy-2.1-py2.7.egg-info/installed-files.txt",
+		"/C/Users/yx/Desktop/Python库源码研究/flask_sqlalchemy/Flask_SQLAlchemy-2.1-py2.7.egg-info/dependency_links.txt",
+		"/C/Users/yx/Desktop/Python库源码研究/web框架源码研究.sublime-project",
+		"/C/Users/yx/Desktop/Python库源码研究/read+learn_framework_sourcecode.txt",
+		"/C/Users/yx/Desktop/cdbjdjdc.py",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/git/Default.sublime-keymap",
+		"/C/Users/yx/Desktop/Movoto_code/movoto.sublime-project",
+		"/C/Users/yx/Desktop/HelloWirld.java",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/fix_same_address_property_3.py",
+		"/C/Users/yx/Desktop/Movoto_code/Utilities/movoto/SqlHelper.py",
+		"/C/Users/yx/Desktop/LoginController.py",
+		"/C/Users/yx/Desktop/webpy-peewee/webpy/webpy_server.py",
+		"/C/Users/yx/Desktop/webpy-peewee/webpy/webpy_demo.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/软件外包_零成本做软件生意赚大钱.txt",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/Theme - Brogrammer/Brogrammer.sublime-theme",
+		"/C/Users/yx/Desktop/ionic混合app开发.py",
+		"/C/Users/yx/Desktop/test_dj/tt.py",
+		"/C/Users/yx/Desktop/test_dj/tt.pyx",
+		"/D/scala-2.12.3/doc/README",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/fix_pr_property_association.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/xxxx.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/xxxx.log",
+		"/C/Users/yx/Desktop/test_git/test.py",
+		"/C/Users/yx/Desktop/test_git/4.txt",
+		"/C/Users/yx/Desktop/test_git/__init__.py",
+		"/C/Users/yx/Desktop/test_git/1.py",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/ayu/ayu-light.sublime-theme",
+		"/C/Users/yx/Desktop/test_dj/manage.py",
+		"/D/Python2.7/lib/site-packages/django/core/management/__init__.py",
+		"/C/Users/yx/Desktop/test_dj/app1/tests.py",
+		"/C/Users/yx/Desktop/test_dj/test_dj/settings.py",
+		"/C/Users/yx/Desktop/my_git_project/mygitproject.sublime-workspace",
+		"/C/Users/yx/Desktop/my_git_project/mygitproject.sublime-project",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/fix_archived_listings.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/get_latest_20_removed_listings.py",
+		"/C/Users/yx/Desktop/ok.py",
+		"/D/Python2.7/lib/site-packages/django/__init__.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/test.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/sync_to_async_in_tornado.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/coroutine_example1.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/coroutine_example2.log",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/User/orgmode.sublime-settings",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/orgmode/orgmode.sublime-settings",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/orgmode/messages/install.org",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/orgmode/README.md",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/sync_to_async_in_gevent.py",
+		"/D/Python2.7/lib/site-packages/gevent/hub.py",
+		"/D/Python2.7/lib/site-packages/gevent/greenlet.py",
+		"/C/Users/yx/Desktop/async_function.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/fix_same_address_property_P+C+yield.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/fix_wrong_url_property_P+C+yield.py",
+		"/D/Python2.7/lib/site-packages/tornado/concurrent.py",
+		"/C/Users/yx/Desktop/Movoto_code/1myUtilsCode/tornado_test.py",
+		"/C/Users/yx/Desktop/还是sublime最适合我吧",
+		"/C/Users/yx/Desktop/只要有能力-上海各种赚钱的机会!!",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/Theme - Brogrammer/YX2.tmTheme",
+		"/C/Users/yx/Desktop/tornado-test.py",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/AceJump/Default (Linux).sublime-keymap",
+		"/C/Users/yx/AppData/Roaming/Sublime Text 3/Packages/AceJump/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 45.0
+	},
+	"find_in_files":
+	{
+		"height": 127.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"https",
+			"http"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Reactjs.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "your_spa/src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2931,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								715,
+								715
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 214.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 45.0
+	},
+	"input":
+	{
+		"height": 56.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o://C:\\Users\\yx\\Desktop":
+	{
+		"height": 437.0
+	},
+	"output.exec":
+	{
+		"height": 251.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 370.0
+	},
+	"output.git-pull":
+	{
+		"height": 377.0
+	},
+	"pinned_build_system": "",
+	"project": "spa.sublime-project",
+	"replace":
+	{
+		"height": 86.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fix_pr",
+				"1myUtilsCode\\fix_pr_property_association.py"
+			],
+			[
+				"4",
+				"4.txt"
+			],
+			[
+				"",
+				"1.py"
+			],
+			[
+				"fix_w",
+				"1myUtilsCode\\fix_wrong_url_property_P+C+yield.py"
+			],
+			[
+				"vendo",
+				"RSD_1.2.1_kilo_ironic_plugin\\ironic_rsa\\ironic\\drivers\\modules\\rsa_podm\\vendor.py"
+			],
+			[
+				"ven",
+				"ironic-140-add-NVME\\drivers\\modules\\rsa_podm\\vendor.py"
+			],
+			[
+				"model",
+				"RSD_1.2.1_kilo_ironic_plugin\\ironic_rsa\\ironic\\db\\sqlalchemy\\models.py"
+			],
+			[
+				"__int",
+				"RSD_1.2.1_kilo_ironic_plugin\\Mock_API\\server\\views\\__init__.py"
+			],
+			[
+				"adapt",
+				"RSD_1.2.1_kilo_ironic_plugin\\ironic_rsa\\ironic\\drivers\\modules\\rsa_podm\\rsa_podm_adapter.py"
+			],
+			[
+				"vendor",
+				"RSD_1.2.1_kilo_ironic_plugin\\ironic_rsa\\ironic\\drivers\\modules\\rsa_podm\\vendor.py"
+			],
+			[
+				"fix_sa",
+				"1myUtilsCode\\fix_same_address_property.py"
+			],
+			[
+				"up",
+				"1myUtilsCode\\update_street_name.py"
+			],
+			[
+				"mapp",
+				"postprocessors\\properties\\mapping_public_record_association.py"
+			],
+			[
+				"diction",
+				"Pipeline\\src\\DictionaryConverter.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\yx\\Desktop\\webpy_sourcecode\\webpy.sublime-project"
+			],
+			[
+				"web",
+				"C:\\Users\\yx\\Desktop\\webpy_sourcecode\\webpy.sublime-project"
+			],
+			[
+				"dja",
+				"C:\\Users\\yx\\Desktop\\mydjango.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"AgentConverter205"
+			]
+		],
+		"width": 776.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 381.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -308,7 +308,7 @@
 			"file": "your_spa/src/index.js",
 			"settings":
 			{
-				"buffer_size": 2931,
+				"buffer_size": 2929,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -744,15 +744,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2931,
+						"buffer_size": 2929,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								715,
-								715
+								1666,
+								1666
 							]
 						],
 						"settings":
@@ -763,7 +763,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 214.0,
+						"translation.y": 1307.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

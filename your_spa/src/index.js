@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   fetchdata() {
-    var url = "https://139.196.99.113:80/get_messages?last_time=" + (new Date()).valueOf();
+    var url = "http://139.196.99.113:80/get_messages?last_time=" + (new Date()).valueOf();
     fetch(url, {
         method: "get",
         headers: {"Connection": "keep-alive"},
@@ -44,7 +44,7 @@ class App extends React.Component {
   }
 
   postdata(message) {
-    var url = "https://139.196.99.113:80/post_messages?last_time=" + (new Date()).valueOf() + "&&message=" + message;
+    var url = "http://139.196.99.113:80/post_messages?last_time=" + (new Date()).valueOf() + "&&message=" + message;
     fetch(url, {
         method:"get",
     }).then( (response) => {

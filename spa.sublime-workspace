@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"console"
+			],
+			[
 				"di",
 				"div\tTag"
 			],
@@ -308,7 +312,7 @@
 			"file": "your_spa/src/index.js",
 			"settings":
 			{
-				"buffer_size": 2929,
+				"buffer_size": 3176,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -685,6 +689,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"err",
+			"last_time",
 			"https",
 			"http"
 		],
@@ -744,15 +750,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2929,
+						"buffer_size": 3176,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1666,
-								1666
+								1753,
+								1753
 							]
 						],
 						"settings":
@@ -763,7 +769,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1307.0,
+						"translation.y": 651.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
